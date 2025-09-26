@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Fontes Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <!--Icones Google Fonts-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <title>bookmark</title>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="topo">
+    <div class="topo-menu-area">
+      <div class="logo">
+  <img src="images/logo.png" alt="Logo">
+      </div>
+      <h5>bookmark</h5>
+    </div>
+  </div>
+  <div class="layout">
+    <div class="menu_lateral">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h4 style="margin: 24px;">Minha Estante</h4>
+        <button id="btn-cadastrar-livro" class="btn btn-primary" style="margin-right: 24px;">Cadastrar novo</button>
+      </div>
+        <table class="menu_tabela">
+          <!-- A tabela será preenchida dinamicamente via JavaScript -->
+        </table>
+    </div>
+    <!-- conteúdo-->
+    <main class="conteudo_principal">
+      <div class="topo_conteudo">
+        <img src="images/livro.png" alt="Livro" class="img-redonda" />
+        <p class="titulo_principal">Selecione um livro</p>
+        <h4>Clique em um livro no menu lateral para ver os detalhes</h4>
+      </div>
+        <form class="form-comentario mt-4 mx-auto">
+          <div class="mb-3 d-flex align-items-start campo-comentario">
+            <div class="campo-pagina">
+              <label for="paginaComentario" class="form-label">Página</label>
+              <input type="number" class="form-control" id="paginaComentario" name="paginaComentario" min="1" placeholder="Ex: 23">
+            </div>
+            <div class="flex-grow-1 ms-3">
+              <label for="comentario" class="form-label">Comentário</label>
+              <textarea class="form-control" id="comentario" name="comentario" rows="3" placeholder="Digite seu comentário"></textarea>
+            </div>
+          </div>
+          <div class="text-end">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+        <table class="comentario-tabela">
+          <!-- A tabela será preenchida dinamicamente via JavaScript -->
+        </table>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+  <!-- Modal Cadastro Livro -->
+  <div class="modal fade" id="modalCadastroLivro" tabindex="-1" aria-labelledby="modalCadastroLivroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modalCadastroLivroLabel">Cadastro de Livro</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="tituloLivro" class="form-label fw-bold">Título do Livro</label>
+            <input type="text" class="form-control" id="tituloLivro" name="tituloLivro" placeholder="Digite o título do livro">
+          </div>
+          <div class="mb-3">
+            <label for="autorLivro" class="form-label fw-bold">Autor</label>
+            <input type="text" class="form-control" id="autorLivro" name="autorLivro" placeholder="Digite o nome do autor">
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="anoLivro" class="form-label fw-bold">Ano de Publicação</label>
+              <input type="number" class="form-control" id="anoLivro" name="anoLivro" placeholder="2024" min="1000" max="2030">
+            </div>
+            <div class="col-md-6">
+              <label for="editoraLivro" class="form-label fw-bold">Editora</label>
+              <input type="text" class="form-control" id="editoraLivro" name="editoraLivro" placeholder="Digite a editora">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" id="btnSalvarLivro" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+

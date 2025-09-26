@@ -1,0 +1,249 @@
+
+/* Tabela de comentários */
+.comentario-tabela {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto 32px auto;
+  border-collapse: separate;
+}
+.comentario-tabela tr {
+  display: flex;
+  gap: 16px;
+  border-top: 1px solid #cccccc;
+  margin-bottom: 48px;
+  margin-top: 48px;
+  width: 100%;
+}
+.comentario-tabela td {
+  display: flex;
+  align-items: flex-start;
+  vertical-align: top;
+  padding: 24px 8px;
+}
+.comentario-pagina-td {
+  width: 100px;
+  min-width: 100px;
+  text-align: right;
+}
+.comentario-conteudo-td {
+  flex: 1;
+  word-break: break-word;
+}
+.comentario-acoes-td {
+  width: 70px;
+  min-width: 60px;
+  text-align: right;
+  justify-content: flex-end
+}
+
+/* Campo de página ao lado do comentário */
+.campo-comentario {
+  display: flex;
+  align-items: flex-start;
+}
+.campo-pagina {
+  width: 120px;
+  min-width: 80px;
+}
+/* Formulário de comentário ocupa 80% da área principal */
+.form-comentario {
+  width: 80%;
+  max-width: 700px;
+}
+/* Imagem redonda para capa de livro */
+.img-redonda {
+  width: 80px;
+  height: 80px;
+  object-fit: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #d8d6d6;
+}
+
+
+
+/* Topo */
+
+.topo-menu-area {
+  width: 25vw; /* igual ao .menu_lateral */
+  min-width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #fbfbfb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #cccccc;
+  z-index: 20;
+}
+
+/* headline */
+
+.topo_conteudo {
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  background: #fff;
+  padding-top: 100px;
+  padding-bottom: 72px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo_principal {
+  margin-left: 25vw; /* deixa espaço para o menu lateral */
+  background: #ffffff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* menu lateral */
+
+.menu_lateral {
+  width: 25vw;
+  min-width: 200px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid  #cccccc;
+  position: fixed; /* menu fixo */
+  left: 0;
+  top: 50px;
+  margin-top: 0;
+  z-index: 10;
+}
+
+.menu_tabela {
+  border-bottom: 1px solid #cccccc;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.menu_tabela tr {
+  border-bottom: 1px solid #cccccc;
+  height: auto;
+}
+
+.menu_tabela td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  vertical-align: middle;
+  min-height: 40px;
+}
+
+.menu_tabela td.text {
+  width: 60%;
+  padding-left: 24px;
+  padding-right: 0;
+}
+
+.menu_tabela td:last-child {
+  width: 40%;
+  text-align: right;
+  padding-right: 24px;
+  padding-left: 0;
+}
+
+/* Icones */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 250,
+  'GRAD' 0,
+  'opsz' 24;
+  color: #253442
+}
+
+
+/* Fontes */
+/* font-weight: Use a value from 100 to 900 */
+
+.titulo_principal {
+  font-family: "Outfit", sans-serif;
+  color: #007bff;
+  font-optical-sizing: auto;
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h6 {
+  font-family: "Outfit", sans-serif;
+  color: #253442;
+  font-optical-sizing: auto;
+  font-weight: 250;
+  font-style: normal;
+  text-align: center;
+}
+
+h5 {
+  font-family: "Outfit", sans-serif;
+  color: #007bff;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+}
+
+.text {
+  font-family: "Noto Sans", sans-serif;
+  color: #253442;
+  font-optical-sizing: auto;
+  font-size: 0.9em;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.smalltext {
+  font-family: "Noto Sans", sans-serif;
+  color: #4e6171;
+  font-optical-sizing: auto;
+  font-size: 0.8em;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
